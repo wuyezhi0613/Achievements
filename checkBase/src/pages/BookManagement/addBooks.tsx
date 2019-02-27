@@ -1,136 +1,160 @@
-import * as React from 'react'
-import { Button, Form, Input, message } from 'antd'
-import HttpClient from '../../utils/HttpClient'
-
+import React from 'react'
+import { Button, Card, Form, Input, message } from 'antd'
+import HttpClient from '@utils/HttpClient'
 
 const FormItem = Form.Item
+
 export interface IProps {
-    test?: any,
-    changePage?: any
+  test?: any
+  changePage?: any
 }
 
 interface IState {
-    test?: any
-    name?: any
-    content?: any
-    labels?: any
-    author?: any
+  test?: any
+  name?: string
+  author?: string
+  labels?: string
+  content?: string
 }
 
-export default class AddBook extends React.Component<IProps, IState> {
-    constructor(props: IProps, state: IState) {
-        super(props)
-        this.state = {
-            name: '',
-            content: '',
-            labels: '',
-            author: ''
-        }
+export default class AddBooks extends React.PureComponent<IProps, IState> {
+  constructor(props: IProps, state: IState) {
+    super(props)
+
+    this.state = {
+      name: '',
+      author: '',
+      labels: '',
+      content: ''
+    }
+  }
+
+  handleNameAdd = (e) => {
+    this.setState({
+      name: e.target.value,
+    })
+  }
+
+  handleAuthorAdd = (e) => {
+    this.setState({
+      author: e.target.value,
+    })
+  }
+
+  handleLabelsAdd = (e) => {
+    this.setState({
+      labels: e.target.value,
+    })
+  }
+
+  handleContentAdd = (e) => {
+    this.setState({
+      content: e.target.value,
+    })
+  }
+
+  filterOption = (inputValue, option) => {
+    return option.title.indexOf(inputValue) > -1
+  }
+
+  addBookFn = (e) => {
+    e.preventDefault()
+    const inputs = document.getElementsByTagName('input')
+    const len = inputs.length
+    let params = ''
+    let str = ''
+    for (let i = 0; i < len; i++) {
+      params += inputs[i].value + '&'
+    }
+    if (params !== '') {
+      const arr = params.split('&')
+      str += 'name=' + arr[0] + '&'
+      str += 'author=' + arr[1] + '&'
+      str += 'labels=' + arr[2] + '&'
+      str += 'content=' + arr[3]
     }
 
+    HttpClient.get('/booksAPI/books/add?' + str, {}).then((res: any) => {
+      if (res) {
+        message.success('添加成功', 3)
+        this.props.changePage()
+      }
+    })
+  }
 
-    handleName = (e) => {
-        e.preventDefault()
-        this.setState({
-            name: e.target.value
-        })
+  recoverFn = (e) => {
+    e.preventDefault()
+    this.setState({
+      name: '',
+      author: '',
+      labels: '',
+      content: ''
+    })
+  }
 
+  render() {
+
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 7 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 },
+        md: { span: 12 },
+      },
     }
 
-    handleContent = (e) => {
-        e.preventDefault()
-        this.setState({
-            content: e.target.value
-        })
-
+    const submitFormLayout = {
+      wrapperCol: {
+        xs: { span: 24, offset: 0 },
+        sm: { span: 10, offset: 7 },
+      },
     }
 
-    handleLabels = (e) => {
-        e.preventDefault()
-        this.setState({
-            labels: e.target.value
-        })
+    return (
+      <Card title='新增图书'
+        bordered={false}
+      >
+        <Form
+          hideRequiredMark
+        >
+          <FormItem
+            {...formItemLayout}
+            label='书名'>
+            <Input className='input' name='name' value={this.state.name}
+              onChange={this.handleNameAdd} />
+          </FormItem>
 
-    }
+          <FormItem
+            {...formItemLayout}
+            label='作者'>
+            <Input className='input' name='author' value={this.state.author}
+              onChange={this.handleAuthorAdd} />
+          </FormItem>
 
-    handleAuthor = (e) => {
-        e.preventDefault()
-        this.setState({
-            author: e.target.value
-        })
+          <FormItem
+            {...formItemLayout}
+            label='标签'>
+            <Input className='input' name='labels' value={this.state.labels} onChange={this.handleLabelsAdd} />
+          </FormItem>
 
-    }
+          <FormItem
+            {...formItemLayout}
+            label='简介'>
+            <Input className='input' name='content' value={this.state.content} onChange={this.handleContentAdd} />
+          </FormItem>
 
-    addBooks = () => {
-        const addBook = `name=${this.state.name}&content=${this.state.content}&labels=${this.state.labels}&author=${this.state.author}`
-        HttpClient.get(`booksAPI/books/add?${addBook}`, {}).then((res: any) => {
-            if (res.data) {
-                message.success('操作成功')
-            }
-        })
-    }
-
-
-
-
-    render() {
-
-        const formItemLayout = {
-            labelCol: {
-                xs: { span: 24 },
-                sm: { span: 8 },
-            },
-            wrapperCol: {
-                xs: { span: 24 },
-                sm: { span: 16 },
-            },
-        }
-        const tailFormItemLayout = {
-            wrapperCol: {
-                xs: {
-                    span: 24,
-                    offset: 0,
-                },
-                sm: {
-                    span: 16,
-                    offset: 8,
-                },
-            },
-        }
-        return (
-            <div className='addBookContainer'>
-                <Form>
-                    <FormItem
-                        {...formItemLayout}
-                        label='名称'
-                    >
-                        <Input placeholder='请输入名称' onChange={this.handleName} className='input' />
-                    </FormItem>
-                    <FormItem
-                        {...formItemLayout}
-                        label='内容'
-                    >
-                        <Input placeholder='请输入内容' onChange={this.handleContent} className='input' />
-                    </FormItem>
-                    <FormItem
-                        {...formItemLayout}
-                        label='标签'
-                    >
-                        <Input placeholder='请输入标签' onChange={this.handleLabels} className='input' />
-                    </FormItem>
-                    <FormItem
-                        {...formItemLayout}
-                        label='作者'
-                    >
-                        <Input placeholder='请输入作者' onChange={this.handleAuthor} className='input' />
-                    </FormItem>
-                    <FormItem {...tailFormItemLayout}>
-                        <Button onClick={this.addBooks} type='primary' className='bookManagement-btn'>确定</Button>
-                        <Button onClick={this.props.changePage} className='bookManagement-btn'>返回</Button>
-                    </FormItem>
-                </Form>
-
-            </div>)
-
-    }
+          <FormItem {...submitFormLayout} style={{ marginTop: 32 }}>
+            <Button type='primary' onClick={this.addBookFn}>
+              提交
+                        </Button>
+            <Button style={{ marginLeft: 8 }} onClick={this.recoverFn}>重置</Button>
+            <Button style={{ marginLeft: 8 }} onClick={this.props.changePage}>返回</Button>
+          </FormItem>
+        </Form>
+      </Card>
+    )
+  }
 }

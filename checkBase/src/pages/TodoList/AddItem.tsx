@@ -1,63 +1,59 @@
 import * as React from 'react'
-import { Input, Button } from 'antd'
-
+import { Button, Input } from 'antd'
+import './index.scss'
 interface IProps {
-    num?: any
-    addItem?: (content?: any) => void
+  test?: any
+  inputValue?: (content?: any) => void
 }
-
+export interface Item {
+  id: string,
+  checked: boolean,
+  content: string
+}
 interface IState {
-    items?: any
-    inputValue?: any
+  item: Item
 }
-class AddItem extends React.Component<IProps, IState> {
-    constructor(props: IProps, state: IState) {
-        super(props)
-        this.state = {
-            items: {},
-            inputValue: ''
+export default class AddItem extends React.Component<IProps, IState> {
+  constructor(props: IProps, state: IState) {
+    super(props)
+    this.state = {
+      item: {
+        id: '',
+        checked: false,
+        content: ''
+      }
+    }
+  }
+  addNewItem = (e) => {
+    e.preventDefault()
+    if (this.props.inputValue) {
+      this.props.inputValue(this.state.item)
+    }
+  }
+
+  getInputValue = (e) => {
+    e.preventDefault()
+    if (e.target.value) {
+      const array = e.target.value.split(',')
+      const myChecked = array[1] === 'true' ? true : false
+      this.setState({
+        item: {
+          id: array[0],
+          checked: myChecked,
+          content: e.target.value
         }
-
+      })
     }
+  }
 
-    handleChange = (e) => {
-        e.preventDefault()
-        if (e.target.value) {
-            this.setState({
-                inputValue: e.target.value
-            })
-        }
-    }
-
-    handleClick = (e) => {
-        e.preventDefault()
-        const len = this.props.num + 1
-        const newId = len > 0 ? len : 0
-        const value = this.state.inputValue
-        if (value !== '') {
-            const obj = {
-                id: newId,
-                name: value,
-                finished: false
-            }
-            if (this.props.addItem) {
-                this.props.addItem(obj)
-            }
-        }
-        this.setState({
-            inputValue: ''
-        })
-
-    }
-
-    render() {
-        return (
-            <div>
-                <Input type='text' placeholder='请输入内容' onChange={this.handleChange} value={this.state.inputValue} style={{ marginRight: '15px', width: '300px' }} />
-                <Button onClick={this.handleClick} type='primary'> 添加</Button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className='addItem-box'>
+        <Input placeholder='TODO' onChange={this.getInputValue} />
+        <Button type='primary' onClick={this.addNewItem}>添加</Button>
+      </div>
+    )
+  }
 }
 
-export default AddItem
+

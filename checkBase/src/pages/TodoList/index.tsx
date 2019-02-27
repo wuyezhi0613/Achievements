@@ -1,102 +1,68 @@
 import * as React from 'react'
-import ListItems from './listItems'
-import AddItem from './AddItem'
-import './todoList.scss'
-
+import AddItem, { Item as GZR } from './addItem'
+import ItemList from './itemList'
+import './index.scss'
 interface IProps {
-    test?: any
+  test: any
 }
 interface IState {
-    test?: any
-    list?: any
-    finished?: any
-    lastId?: any
+  items: GZR[]
 }
-class TodoList extends React.Component<IProps, IState> {
-    constructor(props: IProps, state: IState) {
-        super(props)
 
-        this.state = {
-            list: [{
-                id: 0,
-                name: '吃饭',
-                finished: false
-            }, {
-                id: 1,
-                name: '睡觉',
-                finished: false
-            }, {
-                id: 2,
-                name: '打豆豆',
-                finished: false
-            }],
-            finished: 0,
-            lastId: 2
+
+export default class TodoList extends React.Component<IProps, IState> {
+  constructor(props: IProps, state: IState) {
+    super(props)
+    this.state = {
+      items: [
+        { id: '1', content: '测试数据一', checked: false },
+        { id: '2', content: '测试数据二', checked: true },
+        { id: '3', content: '测试数据三', checked: false },
+        { id: '4', content: '测试数据四', checked: true },
+        { id: '5', content: '测试数据三', checked: false },
+        { id: '6', content: '测试数据四', checked: true }
+      ]
+    }
+  }
+
+  handleItemAdd = (item: any) => {
+    const itemArray = this.state.items
+    itemArray.push(item)
+    this.setState({
+      items: itemArray
+    }, () => {
+      console.log('success')
+    })
+  }
+
+  handleItemDelete = (key: any) => {
+    const itemArray = this.state.items
+    itemArray.map(item => {
+      if (item.id === key) {
+        const index = itemArray.indexOf(item)
+        if (index > -1) {
+          itemArray.splice(index, 1)
         }
-    }
-
-    receiveItem = (newitem) => {
-        const allTask = this.state.list
-        allTask.push(newitem)
-        const lastIndex = allTask.length > 1 ? allTask.length - 1 : 0
-        const lastId = lastIndex === 0 ? 0 : allTask[lastIndex].id
-        this.setState({
-            lastId
-        })
-        this.setState({
-            list: allTask
-        })
-    }
-
-    updateFinished = (todoItem) => {
-        let sum = 0
-        this.state.list.forEach((item) => {
-            if (item.id === todoItem.id) {
-                item.finished = todoItem.finished
-            }
-            if (item.finished === true) {
-                sum++
-            }
-        })
-        this.setState({
-            finished: sum
-        })
-    }
-
-    updateTotal = (delId) => {
-        const obj = this.state.list.filter(item => item.id !== delId)
-        this.setState({
-            list: obj
-        })
-        const newItems = obj.filter(item => item.finished === true)
-        const len = newItems.length
-        this.setState({
-            finished: len
-
-        })
-    }
-
-    render() {
-        return (
-            <div className='todoListContainer'>
-                <h2>TodoList</h2>
-                <p>共{this.state.list.length}项</p>
-                <p>已完成：{this.state.finished}项</p>
-
-                <ul>
-                    {this.state.list.map((item, index) =>
-                        <ListItems
-                            item={item}
-                            sendFinished={this.updateFinished.bind(this)}
-                            sendDelete={this.updateTotal.bind(this)}
-                            key={index}
-                        />
-                    )}
-                </ul>
-                <AddItem addItem={this.receiveItem} num={this.state.lastId} />
+      }
+    })
+    this.setState({
+      items: itemArray
+    })
+  }
+  render() {
+    return (
+      <div className='todoList-box'>
+        <h1>TodoList</h1>
+        {this.state.items.map(item => {
+          return (
+            <div key={item.id}>
+              <ItemList inputItem={item} deleteFn={this.handleItemDelete} />
             </div>
-        )
-    }
+          )
+        })
+        }
+        <AddItem inputValue={this.handleItemAdd} />
+      </div>
+    )
+  }
 }
-
-export default TodoList
