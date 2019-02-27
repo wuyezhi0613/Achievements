@@ -1,0 +1,448 @@
+@media only screen and (min-width: 1441px) {
+  .background-container {
+	background-color: #fff;
+	text-align: left;
+	padding: 39px;
+	border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+  min-height: 872px;
+}
+
+
+.search .search-box {
+  position: relative;
+  border: 1px solid #dbdbdb;
+	display: inline-block;
+	vertical-align: top;
+	width: 413px;
+	height: 40px;
+	margin-bottom: 60px;
+	overflow: hidden;
+}
+
+.search .search-icon {
+	position: absolute;
+	right: 18px;
+	top: 8px;
+	width: 24px;
+	height: 24px;
+	background: url(../../../../../../static/device/img/overviewPage/searchDefault.png);
+	background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.search .search-conent {
+	position: absolute;
+	width:  335px; 
+	height: 22px;
+	line-height: 22px;
+	font-size: 16px;
+	margin: 9px 0 0 18px;
+	color: #ccc;
+	letter-spacing: 4px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+
+
+.search-users .search-users-nav,
+.authorized-users .search-users-nav {
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.prompt-information { 
+	font-size: 14px;
+color: #dbdbdb;
+margin: -8px 0px 60px 0px;
+line-height: 16px;
+letter-spacing: 2px;
+}
+
+.search-user-content {
+	display: inline-block;
+	width: 576px;
+	box-sizing: border-box;
+	border: 1px solid #f0f0f0;
+	font-size: 16px;
+	margin-right: 111px;
+	margin-bottom: 60px;
+}
+
+.information,
+.browse,
+.revisability {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.information {
+	padding: 30px;
+	width: 358px;
+}
+
+.information li {
+	text-align: left;
+	padding-left: 28px;
+	letter-spacing: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #999;
+}
+
+.information li:nth-child(1) {
+	background: url(../../../../../../static/device/img/authorization/user.png) no-repeat;
+}
+
+.information li:nth-child(2) {
+	margin: 16px 0;
+	background: url(../../../../../../static/device/img/authorization/mailbox.png) no-repeat;
+}
+
+.search-users .information li:nth-child(3) {
+	background: url(../../../../../../static/device/img/authorization/close.png) no-repeat;
+}
+
+.authorized-users .information li:nth-child(3) {
+	background: url(../../../../../../static/device/img/authorization/open.png) no-repeat;
+}
+
+.browse,
+.revisability {
+	width: 108px;
+	height: 140px;
+	line-height: 16px;
+	text-align: center;
+	border-left: 1px solid #f0f0f0;
+	color: #f5c987;
+	cursor: pointer;
+}
+
+.browse:hover,
+.revisability:hover {
+	background-color: #f7f7f7;
+}
+
+.search-users .browse dd:first-child,
+.search-users .revisability dd:first-child {
+	margin: 49px 0 8px 0;	
+}
+
+.authorized-users .browse dd,
+.authorized-users .revisability dd {
+	margin-top: 59px;	
+}
+
+.clickRevise {
+	display: none;
+}
+}
+
+
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+ .background-container {
+	background-color: #fff;
+	text-align: left;
+	padding: 39px;
+	border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+  min-height: 872px;
+}
+
+
+.search .search-box {
+  position: relative;
+  border: 1px solid #dbdbdb;
+	display: inline-block;
+	vertical-align: top;
+	width: 390px;
+	height: 36px;
+	margin-bottom: 45px;
+	overflow: hidden;
+}
+
+.search .search-icon {
+	position: absolute;
+	right: 18px;
+	top: 8px;
+	width: 18px;
+	height: 18px;
+	background: url(../../../../../../static/device/img/overviewPage/searchDefault.png);
+	background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.search .search-conent {
+	position: absolute;
+	width:  300px; 
+	height: 18px;
+	line-height: 18px;
+	font-size: 14px;
+	margin: 9px 0 0 14px;
+	color: #ccc;
+	letter-spacing: 3px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+
+
+.search-users .search-users-nav,
+.authorized-users .search-users-nav {
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.prompt-information { 
+	font-size: 14px;
+color: #dbdbdb;
+margin: -8px 0px 45px 0px;
+line-height: 16px;
+letter-spacing: 2px;
+}
+
+.search-user-content {
+	display: inline-block;
+	width: 560px;
+	box-sizing: border-box;
+	border: 1px solid #f0f0f0;
+	font-size: 14px;
+	margin-right: 81px;
+	margin-bottom: 45px;
+}
+
+.information,
+.browse,
+.revisability {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.information {
+	padding: 21px;
+	width: 342px;
+}
+
+.information li {
+	text-align: left;
+	padding-left: 28px;
+	letter-spacing: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #999;
+}
+
+.information li:nth-child(1) {
+	background: url(../../../../../../static/device/img/authorization/user.png) no-repeat;
+}
+
+.information li:nth-child(2) {
+	margin: 16px 0;
+	background: url(../../../../../../static/device/img/authorization/mailbox.png) no-repeat;
+}
+
+.search-users .information li:nth-child(3) {
+	background: url(../../../../../../static/device/img/authorization/close.png) no-repeat;
+}
+
+.authorized-users .information li:nth-child(3) {
+	background: url(../../../../../../static/device/img/authorization/open.png) no-repeat;
+}
+
+.browse,
+.revisability {
+	width: 108px;
+	height: 116px;
+	line-height: 14px;
+	text-align: center;
+	border-left: 1px solid #f0f0f0;
+	color: #f5c987;
+	cursor: pointer;
+}
+
+.browse:hover,
+.revisability:hover {
+	background-color: #f7f7f7;
+}
+
+.search-users .browse dd:first-child,
+.search-users .revisability dd:first-child {
+	margin: 49px 0 8px 0;	
+}
+
+.authorized-users .browse dd,
+.authorized-users .revisability dd {
+	margin-top: 51px;	
+}
+
+.clickRevise {
+	display: none;
+}
+}
+	
+
+
+@media only screen  and (max-width: 1024px) {
+ .background-container {
+	background-color: #fff;
+	text-align: left;
+	padding: 30px;
+	border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.search .search-box {
+  position: relative;
+  border: 1px solid #dbdbdb;
+	display: inline-block;
+	vertical-align: top;
+	width: 330px;
+	height: 30px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.search .search-icon {
+	position: absolute;
+	right: 18px;
+	top: 8px;
+	width: 12px;
+	height: 12px;
+	background: url(../../../../../../static/device/img/overviewPage/searchDefault.png);
+	background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.search .search-conent {
+	position: absolute;
+	width:  282px; 
+	height: 12px;
+	line-height: 12px;
+	font-size: 12px;
+	margin: 9px 0px 0px 9px;
+	color: #ccc;
+	letter-spacing: 3px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+
+
+.search-users .search-users-nav,
+.authorized-users .search-users-nav {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.prompt-information { 
+	font-size: 12px;
+color: #dbdbdb;
+margin: -7px 0px 30px 0px;
+line-height: 14px;
+letter-spacing: 2px;
+}
+
+.search-user-content {
+	display: inline-block;
+	width: 528px;
+	box-sizing: border-box;
+	border: 1px solid #f0f0f0;
+	font-size: 12px;
+	margin-right: 60px;
+	margin-bottom: 30px;
+}
+
+.information,
+.browse,
+.revisability {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.information {
+	padding: 18px;
+	width: 310px;
+}
+
+.information li {
+	text-align: left;
+	padding-left: 28px;
+	letter-spacing: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #999;
+}
+
+.information li:nth-child(1) {
+	background: url(../../../../../../static/device/img/authorization/user.png) no-repeat;
+}
+
+.information li:nth-child(2) {
+	margin: 16px 0;
+	background: url(../../../../../../static/device/img/authorization/mailbox.png) no-repeat;
+}
+
+.search-users .information li:nth-child(3) {
+	background: url(../../../../../../static/device/img/authorization/close.png) no-repeat;
+}
+
+.authorized-users .information li:nth-child(3) {
+	background: url(../../../../../../static/device/img/authorization/open.png) no-repeat;
+}
+
+.browse,
+.revisability {
+	width: 108px;
+	height: 104px;
+	line-height: 12px;
+	text-align: center;
+	border-left: 1px solid #f0f0f0;
+	color: #f5c987;
+	cursor: pointer;
+}
+
+.browse:hover,
+.revisability:hover {
+	background-color: #f7f7f7;
+}
+
+.search-users .browse dd:first-child,
+.search-users .revisability dd:first-child {
+	margin: 49px 0 8px 0;	
+}
+
+.authorized-users .browse dd,
+.authorized-users .revisability dd {
+	margin-top: 45px;	
+}
+
+.clickRevise {
+	display: none;
+}
+}

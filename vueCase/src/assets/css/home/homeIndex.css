@@ -1,0 +1,634 @@
+@charset "utf-8";
+@media only screen and (min-width: 1441px){
+	/*=========== 首页主体 ===========*/
+	.homeIndex-body{
+	position: absolute;
+  top: -147px ;
+	z-index: 999;
+	min-width: 1424px; 
+  max-width: 1903px;
+	background-color: #FFFFFF;
+	}	
+	.homeIndex-body img{
+		width: 100%;
+	}
+	/*=========== 首页导航栏 ===========*/
+	.homeIndex-head{
+		position: fixed;
+		z-index: 1001;
+		width: 100%;
+		height: 66px;
+		border-bottom: 2px solid rgba(246, 234, 213, 0.1);
+	}
+	/*=========== 首页导航栏渐变 ===========*/
+	.search-box-cover{
+	background-color: rgba(255, 255, 255, 0.93);
+	width:100%;
+	height:66px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	opacity:1;
+}
+
+	 /*======== 首页导航栏内容部分 ========*/
+.navs{ 
+	 padding: 0 115px;
+	 height: 66px;
+	 display: flex; 
+	 justify-content: space-between;
+}
+ /*======== 首页导航栏左边 logo加上登录注册 ========*/
+	.logo{ 
+		display: flex;
+	}
+	 /*======== logo图标 ========*/
+	.homeIndex-head .logo img{
+		width: 100%;
+		padding: 12px 36px 0px 0px;
+	}
+ /*======== 登录注册 ========*/
+	.homeIndex-head .logo ul{
+		display: flex;
+	}
+	.homeIndex-head .logo ul li{
+		  font-size: 16px;
+		  line-height: 66px;
+		  padding: 0px 15px 0px 18px;
+		  letter-spacing: 3px;
+		  color: #F6EAD5;
+		  cursor: pointer;
+		  
+	}
+	/*======== 鼠标悬浮底色 ========*/
+  	.homeIndex-head .logo ul li:hover{
+	     background: rgba(246, 234, 213, 0.1 );
+}
+	/*======== 首页导航栏右边菜单加搜索 ========*/
+	.homeIndex-head .nav{ 
+		  display: flex;
+	} 
+  .homeIndex-head .nav ul{ 
+		  display: flex;
+	} 
+		.homeIndex-head .nav li{
+		  font-size: 16px;
+		  line-height: 66px;
+		  padding: 0px 15px 0px 18px;
+		  letter-spacing: 3px;
+		  cursor: pointer;
+	}
+	.homeIndex-head .nav li a{
+		  color: #F6EAD5;
+	}
+/*======== 鼠标悬浮底色 ========*/
+  .homeIndex-head .nav ul li:hover{
+	     background: rgba(246, 234, 213, 0.1 );
+}
+  /*========首页头部导航栏搜索框========*/
+	.homeIndex-head .nav .search{
+		display: flex;
+		height: 24px;
+		margin: 21px 0px 21px 36px;
+		border-radius: 12px; 
+	}
+	.homeIndex-head .nav .search input{
+		width: 176px;
+		font-size: 14px;
+		line-height: 24px; 
+		border-radius: 12px 0px 0px 12px; 
+		letter-spacing: 2px;
+		color: rgba(255, 255, 255, 0.75);
+		display: inline-block;
+		padding: 0px 9px 0px 12px;
+		border: none;
+		background-color: rgba(0,0,0,0.3);
+	}
+	.homeIndex-head .nav .search span {
+		  cursor: pointer;
+		line-height: 26px;
+		display: inline-block;
+		padding-right: 12px;
+		border-radius: 0px 12px 12px 0px; 
+		background-color: rgba(0,0,0,0.3);
+	}
+.homeIndex-head .nav .search span img{
+	 width: 100%;
+	 vertical-align: inherit;
+}
+ 	/*========首页轮播图========*/	
+  .banner .swiper-slide{ 
+  	background-size: 1903px;
+	  background-image: url(../../../../static/home/img/banner.jpg);
+}
+ 	/*========首页轮播图的小按钮========*/	
+	.banner .swiper-pagination-bullet{
+		width: 12px;
+		height: 12px;
+		border: 3px solid #81f1d3;
+		background-color: #81f8da;
+	}
+
+/*======== 解决方案 ========*/
+  .solution .anli{
+  	width: 720px;
+	}
+/*======== 团队介绍 ========*/ 
+	.team-content ul{
+		width: 1200px;
+		margin:0px 0px 300px 0px;
+		display: inline-block;
+	}
+	.team-content ul li{
+		width:300px;
+		height:300px;
+		float:left;
+	} 
+	.team-content ul li:hover{
+    background: -webkit-linear-gradient( left top, rgba(245,165,113,0.9) , rgba(213,171,255,0.9));
+		border-radius: 150px 0px;
+     transition:  all 0.5s ease 0s
+	} 
+	.team-content ul li img{
+		position: relative;
+		z-index: -1;
+	}
+	.name{
+		position: absolute;
+		display: inline-block;
+		font-size: 24px;
+		letter-spacing: 12px;
+		line-height: 33px;
+		color: rgba(0,0,0,0);
+		min-width: 300px;
+		min-height: 300px;
+		padding: 117px 66px ;
+	}
+	.work{
+		font-size: 16px;
+		letter-spacing: 8px;
+		line-height: 24px;
+		margin-top: 8px;
+		padding-right: 4px;
+	}
+  .name:hover{
+		color: #FFFFFF;
+    transition:  all 0.5s ease 0s;
+	}
+  /*============== 页脚 ===================*/
+	.homeIndex-footer{
+		width: 100%;
+		height: 360px;
+		background-color: #282828;
+	}
+	/*=========== 返回顶部按钮 ============*/
+	.homeIndexScrollTop {
+		position: fixed;
+		right: 21px;
+		bottom: 21px;
+		cursor: pointer;
+		width: 63px;
+		height: 42px;
+		background-color: #FFFFFF;
+		border: 1px solid #DBDBDB;
+		font-size: 18px;
+		color: #999;
+		display: inline-block;
+		line-height: 36px;
+		border-radius: 3px;
+	}
+  .homeIndexScrollTop:hover{
+  	color: #333; 
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px) and (max-width:1440px){
+	/*=========== 首页主体 ===========*/
+	.homeIndex-body{
+	position: absolute;
+  top: -110px ;
+	z-index: 999;
+	min-width: 1008px; 
+  max-width: 1423px;
+	background-color: #FFFFFF;
+	}	
+	.homeIndex-body img{
+		width: 100%;
+	}
+	/*=========== 首页导航栏 ===========*/
+	.homeIndex-head{
+		position: fixed;
+		z-index: 1001;
+		width: 100%;
+		height: 51px;
+		border-bottom: 2px solid rgba(246, 234, 213, 0.1);
+	}
+	/*=========== 首页导航栏渐变 ===========*/
+	.search-box-cover{
+	background-color: rgba(255, 255, 255, 0.93);
+	width:100%;
+	height:51px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	opacity:1;
+}
+
+	 /*======== 首页导航栏内容部分 ========*/
+.navs{ 
+	 padding: 0 33px;
+	 height: 51px;
+	 display: flex; 
+	 justify-content: space-between;
+}
+ /*======== 首页导航栏左边 logo加上登录注册 ========*/
+	.logo{ 
+		display: flex;
+	}
+	 /*======== logo图标 ========*/
+	.homeIndex-head .logo img{
+		width: 198px;
+		padding: 9px 27px 0px 0px;
+	}
+ /*======== 登录注册 ========*/
+	.homeIndex-head .logo ul{
+		display: flex;
+	}
+	.homeIndex-head .logo ul li{
+		  font-size: 14px;
+		  line-height: 51px;
+		  padding: 0px 12px 0px 14px;
+		  letter-spacing: 2px;
+		  color: #F6EAD5;
+		  cursor: pointer;
+		  
+	}
+	/*======== 鼠标悬浮底色 ========*/
+  	.homeIndex-head .logo ul li:hover{
+	     background: rgba(246, 234, 213, 0.1 );
+}
+	/*======== 首页导航栏右边菜单加搜索 ========*/
+	.homeIndex-head .nav{ 
+		  display: flex;
+	} 
+  .homeIndex-head .nav ul{ 
+		  display: flex;
+	} 
+		.homeIndex-head .nav li{
+		  font-size: 14px;
+		  line-height: 51px;
+		  padding: 0px 12px 0px 14px;
+		  letter-spacing: 2px;
+		  cursor: pointer;
+	}
+	.homeIndex-head .nav li a{
+		  color: #F6EAD5;
+	}
+/*======== 鼠标悬浮底色 ========*/
+  .homeIndex-head .nav ul li:hover{
+	     background: rgba(246, 234, 213, 0.1 );
+}
+  /*========首页头部导航栏搜索框========*/
+	.homeIndex-head .nav .search{
+		display: flex;
+		height: 24px;
+		margin: 13.5px 0px 13.5px 36px;
+		border-radius: 12px; 
+	}
+	.homeIndex-head .nav .search input{
+		width: 176px;
+		font-size: 12px;
+		line-height: 24px; 
+		border-radius: 12px 0px 0px 12px; 
+		letter-spacing: 2px;
+		color: rgba(255, 255, 255, 0.75);
+		display: inline-block;
+		padding: 2px 9px 0px 12px;
+		border: none;
+		background-color: rgba(0,0,0,0.3);
+	}
+	.homeIndex-head .nav .search span {
+		line-height: 24px;
+		display: inline-block;
+		padding-right: 12px;
+		border-radius: 0px 12px 12px 0px; 
+		background-color: rgba(0,0,0,0.3);
+	}
+.homeIndex-head .nav .search span img{
+	 width: 100%;
+	 vertical-align: inherit;
+}
+ 	/*========首页轮播图========*/	
+  .banner .swiper-slide{
+  	background-size: 1423px;
+	  background-image: url(../../../../static/home/img/banner.jpg);
+}
+.banner .swiper-slide img{
+	width: 1423px;
+}
+ 	/*========首页轮播图的小按钮========*/	
+	.banner .swiper-pagination-bullet{
+		width: 12px;
+		height: 12px;
+		border: 3px solid #81f1d3;
+		background-color: #81f8da;
+	}
+
+/*======== 解决方案 ========*/
+  .solution .anli{
+  	width: 720px;
+	}
+/*======== 团队介绍 ========*/ 
+	.team-content ul{
+		width: 900px;
+		margin:0px 0px 225px 0px;
+		display: inline-block;
+	}
+	.team-content ul li{
+		width:225px;
+		height:225px;
+		float:left;
+	} 
+	.team-content ul li:hover{
+		border-radius: 112.5px 0px;
+    background: -webkit-linear-gradient( left top, rgba(245,165,113,0.9) , rgba(213,171,255,0.9));
+     transition:  all 0.5s ease 0s;
+	} 
+	.team-content ul li img{
+		position: relative;
+		z-index: -1;
+	}
+	.name{
+		position: absolute;
+		display: inline-block;
+		font-size: 18px;
+		letter-spacing: 9px;
+		line-height: 24px;
+		color: rgba(0,0,0,0);
+		min-width: 225px;
+		min-height: 225px;
+		padding: 93px 41.874px ;
+	}
+	.work{
+		font-size: 12px;
+		letter-spacing: 6px;
+		line-height: 18px;
+		margin-top: 6px;
+		padding-right: 3px;
+	}
+  .name:hover{
+		color: #FFFFFF;
+    transition:  all 0.5s ease 0s;
+	}
+  /*============== 页脚 ===================*/
+	.homeIndex-footer{
+		width: 100%;
+		height: 360px;
+		background-color: #282828;
+	}
+	/*=========== 返回顶部按钮 ============*/
+	.homeIndexScrollTop {
+		position: fixed;
+		right: 21px;
+		bottom: 21px;
+		cursor: pointer;
+		width: 63px;
+		height: 42px;
+		background-color: #FFFFFF;
+		border: 1px solid #DBDBDB;
+		font-size: 18px;
+		color: #999;
+		display: inline-block;
+		line-height: 36px;
+		border-radius: 3px;
+	}
+  .homeIndexScrollTop:hover{
+  	color: #333; 
+  }
+
+}
+ 
+ 
+
+
+
+
+
+
+
+   
+@media only screen and (max-width:1024px){
+	/*=========== 首页主体 ===========*/
+	.homeIndex-body{
+	position: absolute;
+  top: -78px ;
+	z-index: 999;
+	min-width: 1007px; 
+  max-width: 1007px;
+	background-color: #FFFFFF;
+	}	
+	.homeIndex-body img{
+		width: 100%;
+	}
+	/*=========== 首页导航栏 ===========*/
+	.homeIndex-head{
+		position: fixed;
+		z-index: 1001;
+		width: 100%;
+		height: 36px;
+		border-bottom: 2px solid rgba(246, 234, 213, 0.1);
+	}
+	/*=========== 首页导航栏渐变 ===========*/
+	.search-box-cover{
+	background-color: rgba(255, 255, 255, 0.93);
+	width:100%;
+	height:36px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	opacity:1;
+}
+
+	 /*======== 首页导航栏内容部分 ========*/
+.navs{ 
+	 padding: 0 60px;
+	 height: 36px;
+	 display: flex; 
+	 justify-content: space-between;
+}
+ /*======== 首页导航栏左边 logo加上登录注册 ========*/
+	.logo{ 
+		display: flex;
+	}
+	 /*======== logo图标 ========*/
+	.homeIndex-head .logo img{
+		width: 132px;
+		padding: 8px 18px 0px 0px;
+	}
+ /*======== 登录注册 ========*/
+	.homeIndex-head .logo ul{
+		display: flex;
+	}
+	.homeIndex-head .logo ul li{
+		  font-size: 9px;
+		  line-height: 36px;
+		  padding: 0px 8px 0px 9px;
+		  letter-spacing: 1px;
+		  color: #F6EAD5;
+		  cursor: pointer;
+		  
+	}
+	/*======== 鼠标悬浮底色 ========*/
+  	.homeIndex-head .logo ul li:hover{
+	     background: rgba(246, 234, 213, 0.1 );
+}
+	/*======== 首页导航栏右边菜单加搜索 ========*/
+	.homeIndex-head .nav{ 
+		  display: flex;
+	} 
+  .homeIndex-head .nav ul{ 
+		  display: flex;
+	} 
+		.homeIndex-head .nav li{
+		  font-size: 9px;
+		  line-height: 36px;
+		  padding: 0px 8px 0px 9px;
+		  letter-spacing: 1px;
+		  cursor: pointer;
+	}
+	.homeIndex-head .nav li a{
+		  color: #F6EAD5;
+	}
+/*======== 鼠标悬浮底色 ========*/
+  .homeIndex-head .nav ul li:hover{
+	     background: rgba(246, 234, 213, 0.1 );
+}
+  /*========首页头部导航栏搜索框========*/
+	.homeIndex-head .nav .search{
+		display: flex;
+		height: 14px;
+		margin: 11px 0px 11px 18px;
+		border-radius: 7px; 
+	}
+	.homeIndex-head .nav .search input{
+		width: 120px;
+		font-size: 9px;
+		line-height: 14px; 
+		border-radius: 6px 0px 0px 6px; 
+		letter-spacing: 1px;
+		color: rgba(255, 255, 255, 0.75);
+		display: inline-block;
+		padding: 0px 5px 0px 6px;
+		border: none;
+		background-color: rgba(0,0,0,0.3);
+	}
+	.homeIndex-head .nav .search span {
+		line-height: 8px;
+		display: inline-block;
+		padding-right: 6px;
+		border-radius: 0px 7px 7px 0px; 
+		background-color: rgba(0,0,0,0.3);
+	}
+.homeIndex-head .nav .search span img{
+	 width: 53%;
+	 vertical-align: inherit;
+}
+ 	/*========首页轮播图========*/	
+  .banner .swiper-slide{ 
+  	background-size: 1007px;
+	  background-image: url(../../../../static/home/img/banner.jpg);
+}
+ 	/*========首页轮播图的小按钮========*/	
+	.banner .swiper-pagination-bullet{
+		width: 6px;
+		height: 6px;
+		border: 2px solid #81f1d3;
+		background-color: #81f8da;
+	}
+
+/*======== 解决方案 ========*/
+  .solution .anli{
+  	width: 720px;
+	}
+/*======== 团队介绍 ========*/ 
+	.team-content ul{
+		width: 636px;
+		margin:0px 0px 159px 0px;
+		display: inline-block;
+	}
+	.team-content ul li{
+		width:159px;
+		height:159px;
+		float:left;
+	} 
+	.team-content ul li:hover{
+		border-radius: 79.5px 0px;
+    background: -webkit-linear-gradient( left top, rgba(245,165,113,0.9) , rgba(213,171,255,0.9));
+     transition:  all 0.5s ease 0s;
+	} 
+	.team-content ul li img{
+		position: relative;
+		z-index: -1;
+	}
+	.name{
+		position: absolute;
+		display: inline-block;
+		font-size: 16px;
+		letter-spacing: 8px;
+		line-height: 18px;
+		color: rgba(0,0,0,0);
+		min-width: 159px;
+		min-height: 159px;
+		padding: 60px 34px;
+	}
+	.work{
+		font-size: 9px;
+		letter-spacing: 3px;
+		line-height: 18px;
+		margin-top: 3px;
+		padding-right: 5px;
+	}
+  .name:hover{
+		color: #FFFFFF;
+    transition:  all 0.5s ease 0s;
+	}
+  /*============== 页脚 ===================*/
+	.homeIndex-footer{
+		width: 100%;
+		height: 360px;
+		background-color: #282828;
+	}
+	/*=========== 返回顶部按钮 ============*/
+	.homeIndexScrollTop {
+		position: fixed;
+		right: 21px;
+		bottom: 21px;
+		cursor: pointer;
+		width: 63px;
+		height: 42px;
+		background-color: #FFFFFF;
+		border: 1px solid #DBDBDB;
+		font-size: 18px;
+		color: #999;
+		display: inline-block;
+		line-height: 36px;
+		border-radius: 3px;
+	}
+  .homeIndexScrollTop:hover{
+  	color: #333; 
+  }
+
+}
+
