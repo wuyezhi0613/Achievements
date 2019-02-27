@@ -1,0 +1,38 @@
+$border: 1px solid #e8e8e8;
+.AllBookContainer{
+    margin: 100px auto;
+    width: 85%;
+}
+.AllBookContainer ul li{
+    border: $border;
+}
+.AllBookContainer ul li{
+    list-style: none
+}
+.AllBookContainer ul li.BookTitle{
+    background: rgba(255,255,255,0.5);
+}
+.input {
+    width: 300px;
+}
+.bookItem {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.bookOperation{
+    text-align: center
+}
+.addBookContainer{
+    margin: 100px auto;
+    width: 450px;
+}
+.bookManagement-btn{
+    margin: 10px;
+}
+.bookDetailContainer{
+    margin: 100px auto;
+    width: 80%;
+}
