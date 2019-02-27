@@ -1,0 +1,160 @@
+{
+  "done": [
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "Task",
+      "creation_time": "2018-10-08T01:52:40.752Z",
+      "description": {
+        "content": "本次考核采用 TypeScript 结合 React 框架进行编码，样式语言采用Sass,部分组件由 AntD 提供，代码提交采用git;考核内容主要为**代码规范编写、组件设计和git提交规范**等。",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "本次考核采用 TypeScript 结合 React 框架进行编码，样式语言采用Sass,部分组件由 AntD 提供，代码提交采用git;考核内容主要为**代码规范编写、组件设计和git提交规范**等。",
+        "mime": "text/markdown"
+      },
+      "id": "6",
+      "prio": 1,
+      "references": [],
+      "title": "目标"
+    },
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "task",
+      "creation_time": "2018-10-08T04:29:16.761Z",
+      "description": {
+        "content": "1. 功能完整性\n2. 界面美观度\n3. 编码规范\n4. 各项git操作\n5. 其他创新",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "1. 功能完整性\n2. 界面美观度\n3. 编码规范\n4. 各项git操作\n5. 其他创新",
+        "mime": "text/markdown"
+      },
+      "id": "8",
+      "references": [],
+      "title": "评分原则"
+    }
+  ],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "Task",
+      "creation_time": "2018-10-08T01:46:18.486Z",
+      "description": {
+        "content": "实现TodoList功能\n### 要求\n\n  1. 不要求完全一致，实现功能即可;\n  2. 数据结构自己Mock;\n  3. 功能必须完善。",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "参考README.md中的效果",
+        "mime": "text/markdown"
+      },
+      "id": "4",
+      "prio": 1,
+      "references": [],
+      "title": "1. TodoList (40’)"
+    },
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "Task",
+      "creation_time": "2018-10-08T01:48:16.718Z",
+      "description": {
+        "content": "### 要求\n\n1. 先完成展示所有书籍，然后完成添加书籍，最后完成别的功能;\n2. 可以查看书籍详情\n3. 组件结构需清晰\n4. 界面需清晰美观明了",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "无效果图，自由发挥",
+        "mime": "text/markdown"
+      },
+      "id": "5",
+      "prio": 1,
+      "references": [],
+      "title": "2.BookManageMent(60')"
+    }
+  ],
+  "testing": [],
+  "todo": [
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "环境",
+      "creation_time": "2018-10-08T01:41:31.670Z",
+      "description": {
+        "content": "开发环境要求\n|序号|名称|版本|备注|\n|:----:|:----|----:|:----|\n|1|Node|10^||\n|2|yarn|latest|不能使用npm|\n|3|git|latest|配合华为云，使用ssh连接|",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "|序号|名称|版本|备注|\n|:----:|:----|----:|:----|\n|1|Node|10^||\n|2|yarn|latest|不能使用npm|\n|3|git|latest|配合华为云，使用ssh连接|",
+        "mime": "text/markdown"
+      },
+      "id": "1",
+      "references": [],
+      "title": "开发环境",
+      "type": "emergency"
+    },
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "环境",
+      "creation_time": "2018-10-08T02:38:25.409Z",
+      "description": {
+        "content": "**从master拉去代码，创建自己得分支，分支命名规则为feature/全名，如feature/guzhongren,推送自己的分支到远程仓库，个人所有开发任务都在自己的分支中进行**",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "**从master拉去代码，创建自己得分支，分支命名规则为feature/全名，如feature/guzhongren,推送自己的分支到远程仓库，个人所有开发任务都在自己的分支中进行并提交**",
+        "mime": "text/markdown"
+      },
+      "id": "7",
+      "references": [],
+      "title": "操作说明",
+      "type": "emergency"
+    },
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "环境",
+      "creation_time": "2018-10-08T01:43:18.262Z",
+      "description": {
+        "content": "使用、设计数据",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "> **api调用方式请参考 Demo 组件中请求**\n\n### TodoList\n\n> 自己设计数据结构\n\n### BookManagement\n\n> 请求为 restful 风格的地址，已在Webpack中做了代理。\n\n|请求方式|请求路径|请求参数|请求描述|\n|:--:|:--|:--|:--|\n|GET|’booksAPI/books‘||获取所有书籍|\n|GET|’booksAPI/books/book_id‘||获取id为book_id的书籍的详情|\n|GET|’booksAPI/books/add‘|{name: string,content: string,labels: string,author: string}|新增书籍|\n|GET|’booksAPI/books/book_id/delete‘||删除 id 为 book_id的书籍|",
+        "mime": "text/markdown"
+      },
+      "id": "3",
+      "references": [],
+      "title": "数据说明",
+      "type": "emergency"
+    },
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "环境",
+      "creation_time": "2018-10-08T01:42:06.838Z",
+      "description": {
+        "content": "各个功能目录说明",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "<pre>\n  <code>\n    |-CheckBase\n      |-public 存放静态页面\n      |-src 代码编写目录\n        |-@types TypeScript定义目录\n        |-api 请求封装目录，需要将图书管理的请求封装\n        |-assets 网站静态资源存放目录，如字体\n        |-components 组件编写目录\n        |-layouts 页面布局面目录，包含Header，Body 和 Footer\n        |-pages 页面内容具体目录\n        |-utils 封装了axios的工具库\n        |-index.scss css编写根目录\n        |-index.tsx 组件加载根目录\n        |-theme.scss 全局样式目录\n      |- ... 其他目录\n  </code>\n</pre>",
+        "mime": "text/markdown"
+      },
+      "id": "2",
+      "references": [],
+      "title": "目录说明",
+      "type": "emergency"
+    }
+  ]
+}

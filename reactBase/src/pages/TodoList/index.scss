@@ -1,0 +1,35 @@
+.todoList-box {
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+}
+
+.todoList-box h1{
+  text-align: center;
+  margin-top: 20px;
+}
+.addItem-box{
+  text-align: center;
+}
+.addItem-box input {
+  width: 200px;
+  margin: 20px 10px;
+}
+.addItem-box button {
+  margin-left: 20px;
+}
+
+.itemList-box {
+  width: 250px;
+  height: 30px;
+  margin: 10px auto;
+}
+.itemList-box .checkBox {
+  margin-right: 20px;
+}
+.itemList-box button {
+  margin-left: 50px;
+}
+
